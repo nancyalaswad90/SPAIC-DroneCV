@@ -1,7 +1,10 @@
 # SPAIC-DroneCV
 "Follow Me Drone" project for Secure and Private AI Challenge (robotics, computer vision, deep learning)
 
-### Team members
+### Use Case
+Object tracking with a drone of a person with epilepsy. The drone will track the person and detect seizures.
+
+### Team Members
 - Jess (@Jess) - https://github.com/jess-s
 - Helena Barmer (@Helena Barmer) - https://github.com/helenabarmer
 - Mahak Bansal (@Mahak Bansal) - https://github.com/mahakbansal
