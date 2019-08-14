@@ -1,0 +1,33 @@
+import cv2
+import numpy as np
+
+# Capture from video
+cap = cv2.VideoCapture(“drone.mp4”)
+
+# Capture from webcam
+#cap = cv2.VideoCapture(0)
+
+while True:
+    ret, frame = cap.read()
+    blurred_frame = cv2.GaussianBlur(frame, (5, 5), 0)
+    hsv = cv2.cvtColor(blurred_frame, cv2.COLOR_BGR2HSV)
+
+    # Red color
+    low_red = np.array([161, 155, 84])
+    high_red = np.array([179, 255, 255])
+    mask = cv2.inRange(hsv, low_red, high_red)
+    # red = cv2.bitwise_and(frame, frame, mask=red_mask)
+
+    contours, _ = cv2.findContours(mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+
+    for contour in contours:
+        cv2.drawContours(frame, contour, -1, (0, 255, 0), 3)
+
+    cv2.imshow("Frame", frame)
+    cv2.imshow("Mask", mask)
+    key = cv2.waitKey(25)
+    if key == 27:
+        break
+
+cap.release()
+cv2.destroyAllWindows()
