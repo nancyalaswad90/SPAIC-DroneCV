@@ -12,5 +12,5 @@ Object tracking with a drone of a person with epilepsy. The drone will track the
 - Arunn Thevapalan (@Arunn) - https://github.com/arunn-thevapalan
 - Pinku Deb Nath (@prantoran) - https://github.com/prantoran
 - Shashank Jain (@Shashank Jain) - https://github.com/Shashankjain12
-
+- Nancy Al Aswad (@Nancy Al Aswad) - https://github.com/nancyalaswad90
 ### Check out the Wiki tab (above) for resources
